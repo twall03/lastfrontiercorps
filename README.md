@@ -11,6 +11,8 @@ guided expeditions in Alaska to rebuild connection, purpose, and resilience.
 - `styles.css` – all styling; brand colors live as CSS variables at the top
 - `script.js` – mobile menu, donation amount picker, footer year (site works without JS)
 - `thanks.html` – page shown after the contact form is sent
+- `tracker/` – read-only launch tracker at `/tracker/` (not linked from the site, hidden from search engines); steps and statuses live in `tracker/steps.json`
+- `governance/` – draft board policies
 - `netlify.toml` – Netlify settings
 - `assets/favicon.svg` – site icon
 
