@@ -32,6 +32,7 @@ branch, root folder), Netlify, Cloudflare Pages, or any web host.
 - [ ] **Application form** – replace `mailto:` with an intake form
 - [ ] **Program details** – confirm expedition lengths, seasons, and eligibility
 - [ ] **Donation impact amounts** in `script.js` – adjust to real program costs
+- [ ] **Founder section** – review the "Our Story" wording with Jeremy and replace the initials circle with his photo
 - [ ] **Photos** – the program cards use illustrated placeholders; real expedition photos will add a lot
 - [ ] Location / mailing address, social media links
 

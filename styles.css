@@ -353,3 +353,18 @@ p { margin: 0 0 1em; }
 .footer-crisis p { margin: 0 0 4px; }
 .footer-legal { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 40px; padding-top: 20px; font-size: 0.82rem; }
 .footer-legal p { margin: 0 0 4px; }
+
+/* ---------- Founder ---------- */
+.founder { padding-top: 0; }
+.founder .split { grid-template-columns: 0.75fr 1.25fr; align-items: center; }
+@media (max-width: 860px) { .founder .split { grid-template-columns: 1fr; } }
+.founder-card { background: var(--spruce); color: var(--snow); border-radius: var(--radius); padding: 36px 32px; box-shadow: var(--shadow); }
+.founder-photo {
+  width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--glacier-deep), var(--moss));
+  font: 700 2rem var(--font-display); color: var(--snow); margin-bottom: 20px;
+}
+.founder-name { font: 700 1.6rem var(--font-display); margin: 0; }
+.founder-role { color: var(--aurora); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 600; }
+.founder-facts { list-style: none; margin: 18px 0 0; padding: 0; }
+.founder-facts li { padding: 10px 0; border-top: 1px solid rgba(255,255,255,0.12); color: rgba(246,244,239,0.88); font-size: 0.97rem; }
