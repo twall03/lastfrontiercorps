@@ -37,7 +37,7 @@ filled in.
 - [ ] **Donation processing** – swap the Give button (currently leads to the contact form) for a real giving link (e.g. Givebutter, Donorbox, Stripe, PayPal Giving Fund)
 - [ ] **Contact form** – enable form detection and email notifications in Netlify (see Hosting)
 - [ ] **Application form** – Apply currently leads to the contact form; add a fuller intake form when ready
-- [ ] **Program details** – confirm expedition lengths, seasons, and eligibility
+- [ ] **Trip details** – the site describes general wilderness trips (fishing or hunting only sometimes, never the purpose); confirm eligibility and what is covered
 - [ ] **Donation impact amounts** in `script.js` – adjust to real program costs
 - [ ] **Founder section** – review the "Our Story" wording with Jeremy and replace the initials circle with his photo
 - [ ] **Photos** – the program cards use illustrated placeholders; real expedition photos will add a lot

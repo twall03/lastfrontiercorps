@@ -376,3 +376,13 @@ p { margin: 0 0 1em; }
 }
 .thanks p { color: rgba(246, 244, 239, 0.88); max-width: 560px; }
 .thanks .btn { margin-top: 12px; }
+
+/* ---------- Trip overview ---------- */
+.trip { display: grid; grid-template-columns: 0.8fr 1.2fr; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.trip-art { height: auto; min-height: 220px; }
+.trip-body { padding: clamp(24px, 4vw, 40px); }
+.trip-list { list-style: none; margin: 0 0 20px; padding: 0; display: grid; gap: 14px; }
+.trip-list li { color: var(--ink-soft); padding-left: 18px; border-left: 3px solid var(--glacier); }
+.trip-list strong { color: var(--ink); }
+.trip-note { margin: 0; font-weight: 600; }
+@media (max-width: 760px) { .trip { grid-template-columns: 1fr; } .trip-art { min-height: 160px; } }

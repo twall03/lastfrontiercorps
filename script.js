@@ -18,10 +18,10 @@
 
   // Donation amount picker
   var impact = {
-    50: '$50 provides a day of meals for a veteran on expedition.',
+    50: '$50 provides a day of meals for a veteran on a trip.',
     150: '$150 helps outfit a veteran with a sleeping bag and pad for the trail.',
-    500: '$500 covers guide and peer-mentor support for one expedition day for a cohort.',
-    1500: '$1,500 helps send one veteran on a full expedition, from travel to trailhead.'
+    500: '$500 covers guide and peer-mentor support for one day of a trip.',
+    1500: '$1,500 helps send one veteran on a full trip, from travel to trailhead.'
   };
   var amounts = document.querySelectorAll('.amount');
   var line = document.getElementById('impact-line');
