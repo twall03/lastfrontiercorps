@@ -35,9 +35,19 @@
       if (line) line.textContent = impact[amt];
       if (link) {
         link.textContent = 'Give ' + label;
-        link.href = 'mailto:donate@lastfrontiercorps.org?subject=' +
-          encodeURIComponent('Donation - ' + label);
+        link.dataset.message = "I'd like to give " + label + '.';
       }
+    });
+  });
+
+  // Buttons that lead to the contact form pre-select who is writing and why
+  var role = document.getElementById('contact-role');
+  var message = document.getElementById('contact-message');
+  document.querySelectorAll('a[data-role]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (role) role.value = a.dataset.role;
+      if (message && a.dataset.message) message.value = a.dataset.message + ' ';
+      if (message) setTimeout(function () { message.focus({ preventScroll: true }); }, 0);
     });
   });
 

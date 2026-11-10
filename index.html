@@ -286,17 +286,17 @@
           <article class="involve-card" id="apply">
             <h3>Veterans: Apply</h3>
             <p>Open to U.S. military veterans of any era, branch, or discharge status who are ready for a supportive challenge. Expeditions are free.</p>
-            <a class="btn btn-primary" href="mailto:apply@lastfrontiercorps.org?subject=Expedition%20Application">Start an Application</a>
+            <a class="btn btn-primary" href="#contact" data-role="Veteran" data-message="I'd like to apply for an expedition.">Start an Application</a>
           </article>
           <article class="involve-card" id="volunteer">
             <h3>Volunteer &amp; Guide</h3>
             <p>Wilderness guides, clinicians, peer mentors, and logistics pros &mdash; we need your skills on and off the trail.</p>
-            <a class="btn btn-secondary" href="mailto:volunteer@lastfrontiercorps.org?subject=Volunteer%20Interest">Volunteer With Us</a>
+            <a class="btn btn-secondary" href="#contact" data-role="Volunteer or guide" data-message="I'd like to volunteer.">Volunteer With Us</a>
           </article>
           <article class="involve-card" id="partner">
             <h3>Partner</h3>
             <p>Lodges, outfitters, businesses, and veteran service organizations: help us reach more veterans and do more with every dollar.</p>
-            <a class="btn btn-secondary" href="mailto:partners@lastfrontiercorps.org?subject=Partnership%20Inquiry">Become a Partner</a>
+            <a class="btn btn-secondary" href="#contact" data-role="Donor or partner" data-message="I'd like to talk about partnering.">Become a Partner</a>
           </article>
         </div>
       </div>
@@ -319,8 +319,8 @@
             <button class="amount" role="radio" aria-checked="false" data-amount="1500">$1,500</button>
           </div>
           <p class="impact-line" id="impact-line">$150 helps outfit a veteran with a sleeping bag and pad for the trail.</p>
-          <a class="btn btn-primary btn-block" id="donate-link" href="mailto:donate@lastfrontiercorps.org?subject=Donation%20-%20%24150">Give $150</a>
-          <p class="fine">Online giving coming soon. Until then, reach out and we'll help you give by check or card.</p>
+          <a class="btn btn-primary btn-block" id="donate-link" href="#contact" data-role="Donor or partner" data-message="I'd like to give $150.">Give $150</a>
+          <p class="fine">Online giving coming soon. Until then, send us a note and we'll follow up with how to give.</p>
         </div>
       </div>
     </section>
@@ -365,11 +365,13 @@
             <li><span>Based in</span>Alaska, USA</li>
           </ul>
         </div>
-        <form class="contact-form" id="contact-form" action="mailto:info@lastfrontiercorps.org" method="post" enctype="text/plain">
+        <form class="contact-form" id="contact-form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <label>Name<input type="text" name="name" autocomplete="name" required></label>
           <label>Email<input type="email" name="email" autocomplete="email" required></label>
           <label>I am a&hellip;
-            <select name="role">
+            <select id="contact-role" name="role">
               <option>Veteran</option>
               <option>Family member or caregiver</option>
               <option>Volunteer or guide</option>
@@ -377,7 +379,7 @@
               <option>Other</option>
             </select>
           </label>
-          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <label>Message<textarea id="contact-message" name="message" rows="4" required></textarea></label>
           <button class="btn btn-primary" type="submit">Send Message</button>
         </form>
       </div>

@@ -10,6 +10,8 @@ guided expeditions in Alaska to rebuild connection, purpose, and resilience.
 - `index.html` – single-page site (mission, programs, approach, get involved, donate, FAQ, contact)
 - `styles.css` – all styling; brand colors live as CSS variables at the top
 - `script.js` – mobile menu, donation amount picker, footer year (site works without JS)
+- `thanks.html` – page shown after the contact form is sent
+- `netlify.toml` – Netlify settings
 - `assets/favicon.svg` – site icon
 
 No build step. Open `index.html` in a browser, or serve locally:
@@ -20,16 +22,21 @@ python3 -m http.server 8000
 
 ## Hosting
 
-Static files only, so it deploys as-is to GitHub Pages (Settings → Pages → deploy from
-branch, root folder), Netlify, Cloudflare Pages, or any web host.
+Deployed on Netlify from this repository. `netlify.toml` tells Netlify there is no build
+step and to serve the repository root. Every push to the production branch redeploys.
+
+The contact form uses Netlify Forms. In the Netlify dashboard, turn on **Forms → Enable
+form detection**, redeploy, and add an email notification so submissions reach an inbox.
+The Apply, Volunteer, Partner and Give buttons all lead to this form with the reason
+filled in.
 
 ## Before launch – fill in placeholders
 
 - [ ] **EIN** in the footer (`EIN: XX-XXXXXXX`)
-- [ ] **Email addresses** (`info@`, `apply@`, `volunteer@`, `donate@`, `partners@lastfrontiercorps.org`) – confirm they exist or replace
-- [ ] **Donation processing** – swap the `mailto:` donate button for a real giving link (e.g. Givebutter, Donorbox, Stripe, PayPal Giving Fund)
-- [ ] **Contact form** – currently `mailto:`; connect to Formspree, Netlify Forms, or similar
-- [ ] **Application form** – replace `mailto:` with an intake form
+- [ ] **Email address** (`info@lastfrontiercorps.org` in the contact section) – confirm it exists or replace
+- [ ] **Donation processing** – swap the Give button (currently leads to the contact form) for a real giving link (e.g. Givebutter, Donorbox, Stripe, PayPal Giving Fund)
+- [ ] **Contact form** – enable form detection and email notifications in Netlify (see Hosting)
+- [ ] **Application form** – Apply currently leads to the contact form; add a fuller intake form when ready
 - [ ] **Program details** – confirm expedition lengths, seasons, and eligibility
 - [ ] **Donation impact amounts** in `script.js` – adjust to real program costs
 - [ ] **Founder section** – review the "Our Story" wording with Jeremy and replace the initials circle with his photo
