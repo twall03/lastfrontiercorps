@@ -12,7 +12,7 @@
   var $ = function (id) { return document.getElementById(id); };
   function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
 
-  fetch('steps.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (data) {
+  fetch('/tracker/steps.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (data) {
     var steps = data.steps, root = $('phases');
     root.textContent = '';
     var live = steps.filter(function (s) { return s.status !== 'skip'; });
